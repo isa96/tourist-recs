@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Itim', cursive;
+  font-size: 14px;
+  background-color: #abd1c6;
+  color: #001e1d;
+}
+
+.jumbotron {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 90px;
+  color: #004643;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+.jumbotron:before{
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.display-1{
+  color: white;
+  position: relative;
+}
+.lead{
+  color: white;
+  position: relative;
+}
+h1 {
+  font-size: 0.2rem;
+}
+
+.btn-success {
+  background-color: #004643;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-success:hover {
+  background-color: #f9bc60;
+  color: #001e1d;
+}
+.Desc{
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 550px) {
+  .Desc{
+    
+    font-size: 1.2rem;
+  }
+  .display-6{
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourism Quiz</title>
+    <link rel="icon" href="../icon/pin-map.svg" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="quiz.css" />
+  </head>
+  <body onload="NextQuestion(0)">
+    <main>
+      <div class="modal-container" id="result">
+        <div class="modal-content-container">
+          <h1>Selamat! Anda berhasil menyelesaikan Quiz <i class="far fa-smile-beam"></i></h1>
+
+          <div class="detail-result">
+            <p>Jumlah Soal : 10</p>
+            <p>Jawaban Salah : <span id="wrong"></span></p>
+            <p>Jawaban Benar : <span id="right"></span></p>
+            <p>Nilai : <span id="total-results"></span>%</p>
+            <p><span id="commentar"></span></p>
+          </div>
+
+          <div class="modal-button-container">
+            <button onclick="closeScoreModal()">Coba Lagi</button>
+            <a href="../index.html"><button>Beranda</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-container">
+        <div class="quiz-details-container">
+          <h1>Nilai : <span id="user-result"></span> / 10</h1>
+          <h1>Pertanyaan : <span id="numberof-question"></span> / 10</h1>
+        </div>
+
+        <div class="quiz-question-container">
+          <h1 id="quiz-display"></h1>
+        </div>
+
+        <div class="quiz-options-container">
+          <div class="modal-container" id="choice-modal">
+            <div class="modal-content-container">
+              <h1>Silakan pilih jawaban</h1>
+
+              <div class="modal-button-container">
+                <button onclick="closeOptionModal()">Selanjutnya</button>
+              </div>
+            </div>
+          </div>
+
+          <span>
+            <input type="radio" id="choices-one" name="option" class="radio" value="optionA" />
+            <label for="choices-one" class="option" id="choices-one-label"></label>
+          </span>
+
+          <span>
+            <input type="radio" id="choices-two" name="option" class="radio" value="optionB" />
+            <label for="choices-two" class="option" id="choices-two-label"></label>
+          </span>
+
+          <span>
+            <input type="radio" id="choices-three" name="option" class="radio" value="optionC" />
+            <label for="choices-three" class="option" id="choices-three-label"></label>
+          </span>
+
+          <span>
+            <input type="radio" id="choices-four" name="option" class="radio" value="optionD" />
+            <label for="choices-four" class="option" id="choices-four-label"></label>
+          </span>
+        </div>
+
+        <div class="next-button-container">
+          <button onclick="handleNextQuestion()">Selanjutnya</button>
+        </div>
+      </div>
+    </main>
+    <script src="quiz.js"></script>
+  </body>
+</html>
